@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="header-name">
+                HODLINFO
+            </div>
+            <div class="mid-btns">
+                <!-- <button class="btn-header btn-inr">INR</button> -->
+                <div class="dropdowns">
+                    <button class="btn-header btn-list dropdown-btn">BTC</button>
+                    <div class="dropdown-content">
+                        <a href="#">BTC</a>
+                        <a href="#">ETH</a>
+                        <a href="#">UDST</a>
+                        <a href="#">XRP</a>
+                        <a href="#">TRX</a>
+                        <a href="#">DASH</a>
+                        <a href="#">ZEC</a>
+                        <a href="#">XEM</a>
+                        <a href="#">IOST</a>
+                        <a href="#">WIN</a>
+                        <a href="#">BTT</a>
+                        <a href="#">WRX</a>
+                    </div>
+                </div>
+                <!-- <button class="btn-header btn-buy-btc">BUY BTC</button> -->
+            </div>
+            <div class="btn telegram">
+                <button class="btn-telegram" mode="button">Connect To Telegram</button>
+            </div>
+        </div>
+        <div class="second-header">
+            <div class="best-price"> BEST PRICE TO TRADE</div>
+            <div class="numerical-blocks">
+                <div class="blk1 blk">
+                    <span class="upper-span">0.26%</span>
+                    <span class="lower-span">5 mins</span>
+                </div>
+                <div class="blk2 blk">
+                    <span class="upper-span">0.94%</span>
+                    <span class="lower-span">1 hour</span>
+                </div>
+                <div class="blk3 blk">
+                    <span class="upper-span upper-mid">₹ 23,78,695</span>
+                    <span class="lower-span lower-mid">Average BTC/INR net price including commission</span>
+                </div>
+                <div class="blk4 blk">
+                    <span class="upper-span">2.81%</span>
+                    <span class="lower-span">1 day</span>
+                </div>
+                <div class="blk5 blk">
+                    <span class="upper-span">4.98%</span>
+                    <span class="lower-span">7 days</span>
+                </div>
+            </div>
+        </div>
+        <div class="table-crypto">
+            <table id="crypto-table">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Last Traded Price</th>
+                    <th>Buy/Sell Price</th>
+                    <th>Volume</th>
+                    <th>Base Unit</th>
+                </tr>
+                <% for (var i=0; i < 10; i++) { %>
+                    <tr>
+                        <th>
+                            <%= i+1 %>
+                        </th>
+                        <th>
+                            <%= data[i].name %>
+                        </th>
+                        <th>
+                            ₹<%= data[i].last %>
+                        </th>
+                        <th>
+                            ₹<%= data[i].buy %> / ₹<%= data[i].sell %>
+                        </th>
+                        <th>
+                            <%= data[i].volume %>%
+                        </th>
+                        <th>
+                            <%= data[i].base_unit %>
+                        </th>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+        <footer class="site-footer">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2019
+                            <a href="#">HODLINFO.COM</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
